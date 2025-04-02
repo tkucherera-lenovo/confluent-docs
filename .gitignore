@@ -4,3 +4,4 @@ _site
 docs/user_reference/node_attributes.md
 docs/manuals/*.md
 confluent
+venv
