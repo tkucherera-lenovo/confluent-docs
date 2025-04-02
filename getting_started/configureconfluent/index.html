@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://obihoernchen.github.io/confluent-docs/getting_started/configureconfluent/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../installconfluent_suse/">
       
       
-        <link rel="next" href="../confluentgroups/">
+        <link rel="next" href="../ibinstallconfluentrhel8/">
       
       
       <link rel="icon" href="../../assets/icon.png">
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../confluentquickstart_el8/" class="md-tabs__link">
           
   
   
@@ -593,6 +593,121 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../confluentquickstart_el8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confluentgroups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installconfluent_rhel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Red Hat Enterprise Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installconfluent_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installconfluent_suse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for SUSE Linux Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -675,52 +790,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../confluentgroups/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Groups
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../confluentquickstart_el8/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent quickstart
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ibinstallconfluentrhel8/" class="md-nav__link">
         
   
@@ -750,75 +819,6 @@
   
   <span class="md-ellipsis">
     InfiniBand install with confluent on SLE 15.2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../installconfluent_rhel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Red Hat Enterprise Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../installconfluent_suse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for SUSE Linux Enterprise
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../installconfluent_ubuntu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Ubuntu
     
   </span>
   
@@ -4532,14 +4532,14 @@
 
 <h2 id="when-used-in-conjunction-with-xcat">When used in conjunction with xCAT<a class="headerlink" href="#when-used-in-conjunction-with-xcat" title="Permanent link">&para;</a></h2>
 <p>If you wish to use xCAT to create the confluent configuration, see
-<a href="{{site.baseurl}}/documentation/configconfluent_xcat.html">Configuring confluent from xCAT</a>
+<a href="../../advanced_topics/xcatconfluentsetup/">Configuring confluent from xCAT</a>
 The remainder of this document is mostly applicable to users working with confluent
 standalone directly rather than using xCAT to configure.</p>
 <h2 id="using-confluent-without-xcat">Using Confluent without xCAT<a class="headerlink" href="#using-confluent-without-xcat" title="Permanent link">&para;</a></h2>
-<p>In confluent, configuration is organized as <a href="{{site.baseurl}}/documentation/nodeattributes.html">attributes</a> on nodes.  The 
+<p>In confluent, configuration is organized as <a href="../../user_reference/node_attributes/">attributes</a> on nodes.  The 
 attributes may be directly configured on a node or inherited from a group.
 Values may be a straightforward string or an expression as documented in 
-the <a href="{{ site.baseurl }}/documentation/attributeexpressions.html">attribute expressions</a>
+the <a href="../../user_reference/attributeexpressions/">attribute expressions</a>
 documentation.</p>
 <p>To get started, it is suggested to use the <code>everything</code> group to set universal attributes.
 The <code>everything</code> group automatically exists and all defined nodes are automatically
@@ -4549,7 +4549,7 @@ suggested to set this data as attributes on the <code>everything</code> group:</
 <div class="highlight"><pre><span></span><code>nodegroupattrib everything console.method=ipmi
 nodegroupattrib everything -p bmcuser bmcpass
 </code></pre></div>
-<p>The <a href="{{site.baseurl}}/documentation/man/nodeattrib.html"><code>nodeattrib</code></a> and <a href="{{site.baseurl}}/documentation/man/nodegroupattrib.html"><code>nodegroupattrib</code></a> commands can either accept <code>key=value</code> or <code>-p key1 key2</code>. The former allows fully non-interactive use, while the
+<p>The <a href="../../manuals/nodeattrib/"><code>nodeattrib</code></a> and <a href="../../manuals/nodegroupattrib/"><code>nodegroupattrib</code></a> commands can either accept <code>key=value</code> or <code>-p key1 key2</code>. The former allows fully non-interactive use, while the
 latter prompts interactively to prevent the username and password from being inadvertently on screen or stored in your shell history.</p>
 <p>From there, adding a specific node using values from the group <code>everything</code> combined with node specific attributes could involve the following:</p>
 <div class="highlight"><pre><span></span><code>nodedefine n3 bmc=n3-xcc
@@ -4566,10 +4566,10 @@ nodegroupdefine compute bmc={nodename}-xcc
 the <code>everything</code> group is automatic, even if not listed in the groups for a node to be in, it will nevertheless be considered a member of that group.</p>
 <p>At this point, there are a few alternative paths to proceed:</p>
 <ul>
-<li>Set up confluent to be able to deploy operating systems (recommended prior to auto-configuration if planning for OS deployment using confluent): <a href="{{site.baseurl}}/documentation/confluentosdeploy.html">Preparing for Operating System Deployment</a></li>
-<li>Discovery is intended to help when IP addresses, usernames, and/or passwords are not configured yet. If these activities are otherwise handled in the environment, it is suggested to skip discovery and read: <a href="{{site.baseurl}}/documentation/manageconfluent.html">Managing hardware using confluent</a></li>
-<li>If the IP addresses, usernames, and/or passwords need to be configured and it is desired to use physical location of equipment as the key, see: <a href="{{site.baseurl}}/documentation/confluentswitchdisco.html">Using switch based discovery for rackmount servers</a> or <a href="{{site.baseurl}}/documentation/confluentenclosuredisco.html">Using enclosure based discovery for dense platforms</a></li>
-<li>If the IP addresses, usernames, and/or passwords need to be configured and it is desired to either use serial numbers, mac addresses, or otherwise manually review the available data to proceed, see: <a href="{{site.baseurl}}/documentation/confluentnodeassign.html">Using nodediscover assign</a></li>
+<li>Set up confluent to be able to deploy operating systems (recommended prior to auto-configuration if planning for OS deployment using confluent): <a href="../../advanced_topics/confluentosdeploy/">Preparing for Operating System Deployment</a></li>
+<li>Discovery is intended to help when IP addresses, usernames, and/or passwords are not configured yet. If these activities are otherwise handled in the environment, it is suggested to skip discovery and read: <a href="../../miscellaneous/manageconfluent/">Managing hardware using confluent</a></li>
+<li>If the IP addresses, usernames, and/or passwords need to be configured and it is desired to use physical location of equipment as the key, see: <a href="../../advanced_topics/confluentswitchdisco/">Using switch based discovery for rackmount servers</a> or <a href="../../advanced_topics/confluentenclosuredisco/">Using enclosure based discovery for dense platforms</a></li>
+<li>If the IP addresses, usernames, and/or passwords need to be configured and it is desired to either use serial numbers, mac addresses, or otherwise manually review the available data to proceed, see: <a href="../../advanced_topics/confluentnodeassign/">Using nodediscover assign</a></li>
 </ul>
 
 
@@ -4593,7 +4593,7 @@ the <code>everything</code> group is automatic, even if not listed in the groups
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 21, 2025 10:16:02"><span class="timeago" datetime="2025-02-21T10:16:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 21, 2025 10:16:02">2025-02-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 00:47:02"><span class="timeago" datetime="2025-04-02T00:47:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 00:47:02">2025-04-02</span>
   </span>
 
     
@@ -4638,7 +4638,7 @@ the <code>everything</code> group is automatic, even if not listed in the groups
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+          <a href="../installconfluent_suse/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Confluent Installation for SUSE Linux Enterprise">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4648,20 +4648,20 @@ the <code>everything</code> group is automatic, even if not listed in the groups
                 Previous
               </span>
               <div class="md-ellipsis">
-                Home
+                Confluent Installation for SUSE Linux Enterprise
               </div>
             </div>
           </a>
         
         
           
-          <a href="../confluentgroups/" class="md-footer__link md-footer__link--next" aria-label="Next: Confluent Groups">
+          <a href="../ibinstallconfluentrhel8/" class="md-footer__link md-footer__link--next" aria-label="Next: InfiniBand install with confluent on RHEL 8">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Confluent Groups
+                InfiniBand install with confluent on RHEL 8
               </div>
             </div>
             <div class="md-footer__button md-icon">

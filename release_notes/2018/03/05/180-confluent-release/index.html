@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../getting_started/configureconfluent/" class="md-tabs__link">
+        <a href="../../../../../getting_started/confluentquickstart_el8/" class="md-tabs__link">
           
   
   
@@ -593,12 +593,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting_started/configureconfluent/" class="md-nav__link">
+      <a href="../../../../../getting_started/confluentquickstart_el8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuring confluent
+    Confluent quickstart
     
   </span>
   
@@ -639,12 +639,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting_started/confluentquickstart_el8/" class="md-nav__link">
+      <a href="../../../../../getting_started/installconfluent_rhel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Confluent quickstart
+    Confluent Installation for Red Hat Enterprise Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_started/installconfluent_suse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for SUSE Linux Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_started/configureconfluent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring confluent
     
   </span>
   
@@ -691,75 +760,6 @@
   
   <span class="md-ellipsis">
     InfiniBand install with confluent on SLE 15.2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../getting_started/installconfluent_rhel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Red Hat Enterprise Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../getting_started/installconfluent_suse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for SUSE Linux Enterprise
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Ubuntu
     
   </span>
   
@@ -4673,15 +4673,15 @@ and confluent is brought to 1.8.0.</p>
 <p>Lenovo switches will now have their addresses enumerated if their management ports are connected by default.  As of 1.8.0,
 this is merely listing the addresses, and does not yet auto-deploy configuration.</p>
 <h2 id="zero-power-discovery-of-chained-thinksystem-d2-enclosures-with-newer-firmware">Zero-power discovery of chained ThinkSystem D2 enclosures with newer firmware<a class="headerlink" href="#zero-power-discovery-of-chained-thinksystem-d2-enclosures-with-newer-firmware" title="Permanent link">&para;</a></h2>
-<p>confluent can now discover chained D2 enclosures without requiring the nodes to PXE boot.  More can be read at <a href="{{site.baseurl}}/documentation/chainedsmmdiscovery.html" title="Chained D2 Discovery">chained D2 discovery</a></p>
+<p>confluent can now discover chained D2 enclosures without requiring the nodes to PXE boot.  More can be read at <a href="../../../../../user_reference/chainedsmmdiscovery/" title="Chained D2 Discovery">chained D2 discovery</a></p>
 <h2 id="add-nodediscover-clear">Add <code>nodediscover clear</code><a class="headerlink" href="#add-nodediscover-clear" title="Permanent link">&para;</a></h2>
 <p>Discovery entries can now be cleared by the <code>clear</code> argument to <code>nodediscover</code>.  This can also selectively clear data by specifying the usual selectors documented in the command.</p>
 <h2 id="uefi-and-other-settings-can-now-be-managed-by-nodeconfig">UEFI and other settings can now be managed by <code>nodeconfig</code><a class="headerlink" href="#uefi-and-other-settings-can-now-be-managed-by-nodeconfig" title="Permanent link">&para;</a></h2>
-<p>The <code>nodeconfig</code> command has been extended to show UEFI data.  To get the previous behavior and only the previous behavior, can do <code>nodeconfig noderange bmc</code> for faster execution.  See the <a href="{{site.baseurl}}//documentation/man/nodeconfig.html" title="nodeconfig man page">man page</a> for more details.</p>
+<p>The <code>nodeconfig</code> command has been extended to show UEFI data.  To get the previous behavior and only the previous behavior, can do <code>nodeconfig noderange bmc</code> for faster execution.  See the <a href="../../../../../manuals/nodeconfig/" title="nodeconfig man page">man page</a> for more details.</p>
 <h2 id="specifically-target-different-firmware-version-retrieval-in-nodefirmware">Specifically target different firmware version retrieval in <code>nodefirmware</code><a class="headerlink" href="#specifically-target-different-firmware-version-retrieval-in-nodefirmware" title="Permanent link">&para;</a></h2>
 <p>Notably, <code>nodefirmware noderange core</code> will get only core firmware, which tends to be a quicker operation.</p>
 <h2 id="group-membership-can-now-by-managed-by-nodeattrib-and-nodegroupattrib-using-and">Group membership can now by managed by <code>nodeattrib</code> and <code>nodegroupattrib</code> using <code>,=</code> and <code>^=</code><a class="headerlink" href="#group-membership-can-now-by-managed-by-nodeattrib-and-nodegroupattrib-using-and" title="Permanent link">&para;</a></h2>
-<p>It is now easier to add and remove nodes from a group, and vice-versa.  See the <a href="{{site.baseurl}}/documentation/man/nodeattrib.html" title="nodeattrib man page">man page</a> for more detail.</p>
+<p>It is now easier to add and remove nodes from a group, and vice-versa.  See the <a href="../../../../../manuals/nodeattrib/" title="nodeattrib man page">man page</a> for more detail.</p>
 <h2 id="dynamically-adjust-console-session-retry-timer">Dynamically adjust console session retry timer<a class="headerlink" href="#dynamically-adjust-console-session-retry-timer" title="Permanent link">&para;</a></h2>
 <p>Console's should reconnect naturally on a more aggressive timescale for smaller clusters</p>
 <h2 id="environment-variables-may-now-be-used-to-pass-attribute-values-to-nodeattrib">Environment variables may now be used to pass attribute values to <code>nodeattrib</code><a class="headerlink" href="#environment-variables-may-now-be-used-to-pass-attribute-values-to-nodeattrib" title="Permanent link">&para;</a></h2>
@@ -4714,7 +4714,7 @@ this is merely listing the addresses, and does not yet auto-deploy configuration
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="March 5, 2025 17:28:22"><span class="timeago" datetime="2025-03-05T17:28:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 5, 2025 17:28:22">2025-03-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 00:47:02"><span class="timeago" datetime="2025-04-02T00:47:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 00:47:02">2025-04-02</span>
   </span>
 
     

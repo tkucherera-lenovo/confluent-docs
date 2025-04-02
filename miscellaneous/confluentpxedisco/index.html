@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting_started/configureconfluent/" class="md-tabs__link">
+        <a href="../../getting_started/confluentquickstart_el8/" class="md-tabs__link">
           
   
   
@@ -591,12 +591,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuring confluent
+    Confluent quickstart
     
   </span>
   
@@ -637,12 +637,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
+      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Confluent quickstart
+    Confluent Installation for Red Hat Enterprise Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for SUSE Linux Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring confluent
     
   </span>
   
@@ -689,75 +758,6 @@
   
   <span class="md-ellipsis">
     InfiniBand install with confluent on SLE 15.2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Red Hat Enterprise Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for SUSE Linux Enterprise
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Ubuntu
     
   </span>
   
@@ -4489,7 +4489,7 @@ prior to PXE booting, sometimes this is not feasible. Two such scenarios would b
 <li>The configuration has the management controller unavailable (for example, needing to move the management controller onto a port shared with the operating system)</li>
 </ul>
 <p>In such a scenario, doing discovery PXE first is a strategy to move forward.  Note that prior to confluent performing a PXE driven discovery, confluent must have
-<a href="{{site.baseurl}}/documentation/confluentosdeploy.html">OS deployment capability initialized</a></p>
+<a href="../../advanced_topics/confluentosdeploy/">OS deployment capability initialized</a></p>
 <h1 id="specifying-a-deployment-target-in-advance">Specifying a deployment target in advance<a class="headerlink" href="#specifying-a-deployment-target-in-advance" title="Permanent link">&para;</a></h1>
 <p>In confluent, the deployment may be directed before MAC addresses are yet known. For example to boot to Genesis (a provided diskless image for basic servicing and setup):</p>
 <div class="highlight"><pre><span></span><code># nodedeploy n1 -n -p genesis-x86_64
@@ -4512,12 +4512,12 @@ likely a matter of pressing the power button once.</p>
 -----|------|-------|-------------------------------------|------------------|-----------|---------------------
      |      |       | 58962b3d-088b-11e7-b8b8-9e59e5cf61db| 08:94:ef:41:01:f0| pxe-client|                     
 </code></pre></div>
-An entry can be associated with a node in the same fashion as <a href="{{site.baseurl}}/documentation/confluentnodeassign.html">manual discovery</a></p>
+An entry can be associated with a node in the same fashion as <a href="../../advanced_topics/confluentnodeassign/">manual discovery</a></p>
 <div class="highlight"><pre><span></span><code># nodediscover assign -e 08:94:ef:41:01:f0 -n n1
 Assigned: n1
 </code></pre></div>
 <h1 id="automatic-discovery-of-mac-addresses">Automatic discovery of mac addresses<a class="headerlink" href="#automatic-discovery-of-mac-addresses" title="Permanent link">&para;</a></h1>
-<p>The same mechanisms that may be used for management controller and enclosure controller discovery in <a href="{{site.baseurl}}/documentation/confluentswitchdisco.html">using switch based discovery</a> may be used to help gather the PXE information automatically.  The difference being that <code>nodediscover rescan</code> will not work for PXE attempts, and confluent must simply wait for an attempt before it can proceed.</p>
+<p>The same mechanisms that may be used for management controller and enclosure controller discovery in <a href="../../advanced_topics/confluentswitchdisco/">using switch based discovery</a> may be used to help gather the PXE information automatically.  The difference being that <code>nodediscover rescan</code> will not work for PXE attempts, and confluent must simply wait for an attempt before it can proceed.</p>
 <p>One example to designate the system cabled to a switch named <code>r4e1</code> on port <code>34</code> as <code>n1</code> and enable fully automatic mac gathering would be:</p>
 <div class="highlight"><pre><span></span><code># nodedefine n1 discovery.policy=permissive,pxe net.switch=r4e1 net.switchport=34
 </code></pre></div>
@@ -4552,7 +4552,7 @@ use an OCP card to provide BMC access.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 21, 2025 10:16:02"><span class="timeago" datetime="2025-02-21T10:16:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 21, 2025 10:16:02">2025-02-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 00:47:02"><span class="timeago" datetime="2025-04-02T00:47:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 00:47:02">2025-04-02</span>
   </span>
 
     

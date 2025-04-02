@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting_started/configureconfluent/" class="md-tabs__link">
+        <a href="../../getting_started/confluentquickstart_el8/" class="md-tabs__link">
           
   
   
@@ -591,12 +591,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuring confluent
+    Confluent quickstart
     
   </span>
   
@@ -637,12 +637,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
+      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Confluent quickstart
+    Confluent Installation for Red Hat Enterprise Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for SUSE Linux Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring confluent
     
   </span>
   
@@ -689,75 +758,6 @@
   
   <span class="md-ellipsis">
     InfiniBand install with confluent on SLE 15.2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Red Hat Enterprise Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for SUSE Linux Enterprise
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Ubuntu
     
   </span>
   
@@ -4581,7 +4581,7 @@ time,node,Ambient Temp (°C),CPU 1 OverTemp,CPU 2 OverTemp,CPU1 Temp (°C),CPU1 
 <h2 id="using-the-api-python-or-web">Using the API (python or web)<a class="headerlink" href="#using-the-api-python-or-web" title="Permanent link">&para;</a></h2>
 <p>Live power and cooling data is available from confluent
 via the 'sensors' portion of the API.  See the
-<a href="{{ site.baseurl }}/documentation/developer/api.html">API reference</a>
+<a href="../../developer/api/">API reference</a>
 for a general introduction to general usage of the API.</p>
 <p>Specifically, the sensors of interest are under the <code>/sensors/hardware/temperature</code> and <code>/sensors/hardware/power</code>
 categories.  Here is an example using curl to illustrate retrieving a single temperature on a single system:</p>
@@ -4680,7 +4680,7 @@ categories.  Here is an example using curl to illustrate retrieving a single tem
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 21, 2025 10:16:02"><span class="timeago" datetime="2025-02-21T10:16:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 21, 2025 10:16:02">2025-02-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 00:47:02"><span class="timeago" datetime="2025-04-02T00:47:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 00:47:02">2025-04-02</span>
   </span>
 
     

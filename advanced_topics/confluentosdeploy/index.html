@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting_started/configureconfluent/" class="md-tabs__link">
+        <a href="../../getting_started/confluentquickstart_el8/" class="md-tabs__link">
           
   
   
@@ -591,12 +591,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuring confluent
+    Confluent quickstart
     
   </span>
   
@@ -637,12 +637,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/confluentquickstart_el8/" class="md-nav__link">
+      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Confluent quickstart
+    Confluent Installation for Red Hat Enterprise Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluent Installation for SUSE Linux Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/configureconfluent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring confluent
     
   </span>
   
@@ -689,75 +758,6 @@
   
   <span class="md-ellipsis">
     InfiniBand install with confluent on SLE 15.2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_rhel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Red Hat Enterprise Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_suse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for SUSE Linux Enterprise
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/installconfluent_ubuntu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Confluent Installation for Ubuntu
     
   </span>
   
@@ -4483,7 +4483,7 @@
 
 
 <p>If opting to use the confluent OS deployment mechanism, some additional preparation steps are suggested.</p>
-<p>Some <a href="{{site.baseurl}}/documentation/nodeattributes.html">node attributes</a> that may be particularly relevant are:</p>
+<p>Some <a href="../../user_reference/node_attributes/">node attributes</a> that may be particularly relevant are:</p>
 <ul>
 <li><code>crypted.grubpassword</code> - By default, no boot loader password is used, specify one here to configure deployed OS to require a password to modify grub configuration.</li>
 <li><code>crypted.rootpassword</code> - By default, password based login as root is disabled in deployed operating systems. Set this to a desired value to enable password login. If this is not set, then
@@ -4494,7 +4494,7 @@ there will be no way to log into the console of the target system by default. No
 <li><code>dns.servers</code> - Set to IP addresses that will provide name resolution services, separated by commas if more than one specified.</li>
 <li><code>hardwaremanagement.port</code> - If needing to change the XCC (xClarity Controller) network port to be shared with an OCP card or onboard network, set to 'ocp' or 'lom' respectively. Ignore for using the dedicated management port or the SMM (System Management Module) in dense, enclosure hosted systems.  Also ignore if you do not use the <code>configbmc</code> script.</li>
 <li><code>hardwaremanagement.vlan</code> - If needing to set the XCC to be on a tagged vlan, set this to the desired VLAN. Ignore if using the native VLAN. Again, this only applies if you use the <code>configbmc</code> script.</li>
-<li><code>net.hostname</code> - If wanting to include other aliases for an interface to use to SSH in, use this attribute to indicate aliases other than the nodename itself, using commas as needed to indicate multiple values. This attribute is not needed if the node name is the only desired hostname. Note that this setting may be done for multiple interfaces, e.g. <code>net.compute.hostname={node}-compute</code>, <code>net.fabric.hostname={node}-ib</code>.  See <a href="{{site.baseurl}}/documentation/confignet.html">Confluent multi interface configuration
+<li><code>net.hostname</code> - If wanting to include other aliases for an interface to use to SSH in, use this attribute to indicate aliases other than the nodename itself, using commas as needed to indicate multiple values. This attribute is not needed if the node name is the only desired hostname. Note that this setting may be done for multiple interfaces, e.g. <code>net.compute.hostname={node}-compute</code>, <code>net.fabric.hostname={node}-ib</code>.  See <a href="../../miscellaneous/confignet/">Confluent multi interface configuration
 </a> for more details on configuring multiple interfaces.</li>
 <li><code>net.ipv4_gateway</code> - Set to the gateway IP for the deployed system to use.  This also supports the multiple interface scheme as mentioned above.</li>
 <li><code>net.ipv4_method</code> - This defaults to <code>static</code>, based on a name lookup of the node.  Use <code>firmwaredhcp</code> if there is an external DHCP server that serves addresses during PXE, but static is desired in the OS.  Set to <code>dhcp</code> to delegate OS addresses entirely to a DHCP server.  This also supports the multiple interface scheme as mentioned above.</li>
@@ -4512,7 +4512,7 @@ there will be no way to log into the console of the target system by default. No
 <h1 id="name-resolution-optional">Name resolution (optional)<a class="headerlink" href="#name-resolution-optional" title="Permanent link">&para;</a></h1>
 <p>An existing or otherwise manually configured DNS solution is fine for a confluent managed cluster. If such a solution is unavailable, this section provides a strategy to quickly generate IP addresses and use
 <code>dnsmasq</code> as a name server.</p>
-<p>The <a href="{{site.baseurl}}/documentation/man/confluent2hosts.html"><code>confluent2hosts</code></a> command may be used to manage entries in an /etc/hosts file. This can use <a href="{{site.baseurl}}/documentation/attributeexpressions.html">attribute expressions</a> to help form entries for a range. Here is an example to generate 8 entries for nodes d1 through d8:</p>
+<p>The <a href="../../manuals/confluent2hosts/"><code>confluent2hosts</code></a> command may be used to manage entries in an /etc/hosts file. This can use <a href="../../user_reference/attributeexpressions/">attribute expressions</a> to help form entries for a range. Here is an example to generate 8 entries for nodes d1 through d8:</p>
 <div class="highlight"><pre><span></span><code># nodegroupattrib everything dns.domain=cluster.lan
 # confluent2hosts d1-d8 -i 172.30.100.{n1}
 # grep d5 /etc/hosts
@@ -4606,7 +4606,7 @@ not have been configured yet in the <code>post</code> phase or else must run whe
 itself (e.g. using <code>imgutil exec</code>) is recommended to keep memory consumption down and boot time down.</p>
 <p>All content are simple files stored under the respective profile (/var/lib/confluent/public/os/[profile]). For scripted install profiles and cloning,
 scripts may be placed in scripts/pre.d, scripts/post.d, and scripts/firstboot.d.
-For diskless installs, scripts/onboot.d is available.  Note that content under /var/lib/confluent/public is considered non-sensitive and must not include any passwords, secret keys, or similarly sensitive information. See the document <a href="{{site.baseurl}}/documentation/osdeploysecurity.html">Handling of security information in OS deployment</a> for guidance.</p>
+For diskless installs, scripts/onboot.d is available.  Note that content under /var/lib/confluent/public is considered non-sensitive and must not include any passwords, secret keys, or similarly sensitive information. See the document <a href="../../miscellaneous/osdeploysecurity/">Handling of security information in OS deployment</a> for guidance.</p>
 <p>Additionally check files like kickstart.custom in the top level directory for some suggested alterations.</p>
 <h1 id="handling-xclarity-controller-or-tsm-on-shared-ports-on-board-network-or-ocp">Handling xClarity Controller or TSM on shared ports (on board network or OCP)<a class="headerlink" href="#handling-xclarity-controller-or-tsm-on-shared-ports-on-board-network-or-ocp" title="Permanent link">&para;</a></h1>
 <p>If wanting to move the xClarity Controller or TSM to be accessed over a port shared with the operating system, see either <code>pre.custom</code> of an install profile or <code>onboot.sh</code> of the genesis profile for examples of how to
@@ -4636,11 +4636,11 @@ in nodeinventory across systems.  However, for certain non-Lenovo systems, the U
 <h1 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h1>
 <p>With OS deployment ready, depending on circumstances it may be appropriate to move on to:</p>
 <ul>
-<li>Deploying operating systems without disks: <a href="{{site.baseurl}}/documentation/confluentdiskless.html">Using confluent diskless support</a></li>
-<li>Discovering rackmount systems with dedicated management port in use based on physical location: <a href="{{site.baseurl}}/documentation/confluentswitchdisco.html">Using switch based discovery</a></li>
-<li>Discovering systems in server enclosures based on physical location: <a href="{{site.baseurl}}/documentation/confluentenclosuredisco.html">Using enclosure based discovery</a></li>
-<li>Discovering systems that have management port shared with the on board network or OCP add-on based on physical location: <a href="{{site.baseurl}}/documentation/confluentpxedisco.html">PXE driven discovery</a></li>
-<li>Using criteria such as mac address or serial number to manually discover or discover from spreadsheet: <a href="{{site.baseurl}}/documentation/confluentnodeassign.html">Using nodediscover assign</a></li>
+<li>Deploying operating systems without disks: <a href="../../miscellaneous/confluentdiskless/">Using confluent diskless support</a></li>
+<li>Discovering rackmount systems with dedicated management port in use based on physical location: <a href="../confluentswitchdisco/">Using switch based discovery</a></li>
+<li>Discovering systems in server enclosures based on physical location: <a href="../confluentenclosuredisco/">Using enclosure based discovery</a></li>
+<li>Discovering systems that have management port shared with the on board network or OCP add-on based on physical location: <a href="../../miscellaneous/confluentpxedisco/">PXE driven discovery</a></li>
+<li>Using criteria such as mac address or serial number to manually discover or discover from spreadsheet: <a href="../confluentnodeassign/">Using nodediscover assign</a></li>
 </ul>
 
 
@@ -4664,7 +4664,7 @@ in nodeinventory across systems.  However, for certain non-Lenovo systems, the U
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 26, 2025 17:14:33"><span class="timeago" datetime="2025-02-26T17:14:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 26, 2025 17:14:33">2025-02-26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 2, 2025 00:47:02"><span class="timeago" datetime="2025-04-02T00:47:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 2, 2025 00:47:02">2025-04-02</span>
   </span>
 
     
